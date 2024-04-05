@@ -3,7 +3,8 @@ import TodoList from './components/TodoList';
 
 
 function App() {
-  return <TodoList initialItems={[]} />;
+
+  return <TodoList initialItems={[]}/>;
 }
 
 export default App;

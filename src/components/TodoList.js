@@ -3,8 +3,11 @@ import { animateScroll } from "react-scroll";
 import TodoItem from './TodoItem';
 import { fetchTasks, addTask, deleteTask, addMessage, fetchMessage } from '../services/apiService';
 import nextArrow from '../images/Polygon 13.png';
+import logo from '../images/image 2.png';
+import logo2 from '../images/image 3.png';
 
 class TodoList extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -12,10 +15,12 @@ class TodoList extends Component {
             showAddItemInput: false,
             newItemText: '',
         };
+
     }
 
     componentDidMount() {
         this.reloadItems()
+
         /*fetchMessage()
             .then(tasks => {
                 const formattedTasks = tasks.map(task => ({
@@ -114,18 +119,24 @@ class TodoList extends Component {
         return (
 
             <main className="container" >
+                <img id="logoImg" src={logo} className="pt-5 pe-5 me-5"></img>
                 <div>
                     <div className="wave"></div>
                     <div className="wave"></div>
                     <div className="wave"></div>
                 </div>
 
-                <div className="row" >
-                    <div className="col-md-6 col-sm-10 mx-auto p-0 ">
-                        <div className="card vh-100" id="appHolder" >
+                <div className="row">
 
-                            <div className="card position-sticky vh-100 overflow-auto border-0" id="options-holder" >
-                            <ul className="list-group list-group-flush border-top-0 border-0 position-sticky" id="appHolder">
+                    <div className="col-md-6 col-sm-10 mx-auto p-0">
+
+                        <div className="card vh-100" id="appHolder">
+
+                            <div className="top-0 position-aboslute rounded-bottom-3 border-bottom" id="topBar"> <img className="pt-3 pb-3 w-25 position-relative top-0 start-50 translate-middle-x" id="logoImg2" src={logo2} ></img></div>
+
+                            <div className="card position-sticky vh-100 overflow-auto border-0 " id="options-holder" >
+                            <ul className="list-group list-group-flush border-top-0 border-0 position-sticky " id="appHolder">
+
                                 {this.renderItems() }
                             </ul>
                             </div>
@@ -139,7 +150,6 @@ class TodoList extends Component {
                                             onChange={this.handleInputChange}
                                             placeholder="How can we help?"
                                             id="inputBar"
-
                                         />
                                 </div>
                                 <div className="col-sm">

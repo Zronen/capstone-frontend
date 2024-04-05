@@ -31,12 +31,21 @@ background-color:transparent;
   opacity:73%
 }
 
-#appHolder, #itemBackground, #appHolderRow{
+#appHolder, #itemBackground, #appHolderRow, #options-holder{
   background-color:#606C38;
 }
 
+
 .greenBackground{
   background-color:#606C38;
+}
+
+#greenBackground{
+  background-color:#606C38;
+}
+
+#topBar{
+  background-color:#FEFAE0;
 }
 
 #listItem1{
@@ -62,6 +71,17 @@ background-color:transparent;
   background-color:#DDA15E;
   color: #9e5007;
   */
+
+}
+
+#logoImg{
+  position:absolute;
+  max-width:20vw;
+  margin-top: 80vh;
+  margin-right:15vw;
+}
+
+#logoImg2{
 
 }
 
@@ -106,18 +126,21 @@ body {
   bottom: 0;
   left: 0;
   z-index: -1;
+
 }
 
 .wave:nth-of-type(2) {
   bottom: -1.25em;
   animation: wave 18s linear reverse infinite;
   opacity: 0.8;
+
 }
 
 .wave:nth-of-type(3) {
   bottom: -2.5em;
   animation: wave 20s -1s reverse infinite;
   opacity: 0.9;
+
 }
 
 @keyframes wave {
@@ -141,3 +164,5 @@ body {
     transform: translateX(1);
   }
 }
+
+
